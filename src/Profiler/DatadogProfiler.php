@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Sourceability\Instrumentation\Profiler;
 
+use DDTrace\Tracer;
 use function dd_trace_env_config;
-use DDTrace\Bootstrap;
 use DDTrace\Contracts\Scope;
 use DDTrace\GlobalTracer;
 use DDTrace\Tag;
@@ -86,7 +86,7 @@ class DatadogProfiler implements ProfilerInterface
             return;
         }
 
-        Bootstrap::resetTracer();
+        GlobalTracer::set(new Tracer());
     }
 
     private function isEnabled(): bool

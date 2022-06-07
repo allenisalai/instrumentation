@@ -2,7 +2,7 @@
 .DEFAULT_GOAL := help
 
 EXEC_YAMLLINT = yamllint
-ifeq (, $(shell which -s yamllint))
+ifeq (, $(shell which yamllint))
 	EXEC_YAMLLINT = docker run --rm $$(tty -s && echo "-it" || echo) -v $(PWD):/data cytopia/yamllint:1.26
 endif
 

@@ -15,7 +15,7 @@ parameters:
         - '#Call to.+ method .+ on an unknown class DDTrace\\.+#'
         - '#Call to static method [^(]+\(\) on an unknown class Tideways\\Profiler.#'
         - '#Call to deprecated method getMasterRequest\(\) of class Symfony\\Component\\HttpFoundation\\RequestStack#'
-        - '#Function spx_profiler_\S+ not found#'
+        - '#Method Sourceability\\Instrumentation\\Bundle\\DependencyInjection\\SourceabilityInstrumentationExtension::loadInternal\(\) has parameter \$config with no value type specified in iterable type array#'
 
 includes:
     - vendor/phpstan/phpstan-deprecation-rules/rules.neon
